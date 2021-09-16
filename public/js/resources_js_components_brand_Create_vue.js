@@ -81,7 +81,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     name: 'brand-list'
                   });
                 })["catch"](function (err) {
-                  console.log(err);
                   alert(err);
                 });
 

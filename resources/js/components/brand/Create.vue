@@ -40,7 +40,6 @@ export default {
                     this.$router.push({ name: 'brand-list' })
                 })
                 .catch(err => {
-                    console.log(err)
                     alert(err)
                 })
         }

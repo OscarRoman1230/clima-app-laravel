@@ -10,7 +10,8 @@ class Product extends Model
 {
     use HasFactory;
 
-    public function brands () {
+    public function brand ()
+    {
         return $this->belongsTo(Brand::class);
     }
 
@@ -25,7 +26,7 @@ class Product extends Model
         'observations',
         'quantity',
         'boarding_date',
-        'brand_id'
+        'brands_id'
     ];
 
     /**

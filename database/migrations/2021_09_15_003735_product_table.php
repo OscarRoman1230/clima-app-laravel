@@ -13,15 +13,15 @@ class ProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
             $table->string('size');
             $table->string('observations');
             $table->string('quantity');
             $table->date('boarding_date');
-            $table->unsignedBigInteger('brand_id');
-            $table->foreign('brand_id')->references('id')->on('brand')->cascadeOnDelete();
+            $table->unsignedBigInteger('brands_id');
+            $table->foreign('brands_id')->references('id')->on('brands')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class ProductTable extends Migration
      */
     public function down()
     {
-        Schema::drop('product');
+        Schema::drop('products');
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="https://vuejs.org/images/logo.svg" alt="" width="30" height="24">

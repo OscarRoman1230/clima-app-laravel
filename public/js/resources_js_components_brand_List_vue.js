@@ -987,7 +987,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "table-responsive" }, [
-          _c("table", { staticClass: "bg-primary text-white" }, [
+          _c("table", { staticClass: "table table-bordered" }, [
             _vm._m(0),
             _vm._v(" "),
             _c(
@@ -1042,7 +1042,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
+    return _c("thead", { staticClass: "bg-primary text-white" }, [
       _c("tr", [
         _c("th", [_vm._v("Id")]),
         _vm._v(" "),

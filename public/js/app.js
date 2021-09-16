@@ -19765,7 +19765,7 @@ var render = function() {
   return _c("main", [
     _c(
       "nav",
-      { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
+      { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary mb-2" },
       [
         _c("div", { staticClass: "container-fluid" }, [
           _vm._m(0),

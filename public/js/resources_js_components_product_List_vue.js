@@ -65,6 +65,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "List",
   data: function data() {
@@ -88,7 +98,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _this.axios.get('/api/product').then(function (res) {
                   _this.products = res.data;
                 })["catch"](function (err) {
-                  _this.brands = [];
+                  _this.products = [];
                 });
 
               case 2:
@@ -104,7 +114,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       if (confirm('¿Desea eliminar el registro?')) {
         this.axios["delete"]("/api/product/".concat(id)).then(function (res) {
-          _this2.getBrands();
+          _this2.getProduct();
         })["catch"](function (err) {
           console.log(err);
         });
@@ -987,7 +997,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "table-responsive" }, [
-          _c("table", { staticClass: "bg-primary text-white" }, [
+          _c("table", { staticClass: "table table-bordered" }, [
             _vm._m(0),
             _vm._v(" "),
             _c(
@@ -997,6 +1007,16 @@ var render = function() {
                   _c("td", [_vm._v(_vm._s(item.id))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(item.name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.size))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.observations))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.quantity))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.boarding_date))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.nameBrand))]),
                   _vm._v(" "),
                   _c(
                     "td",
@@ -1045,11 +1065,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
+    return _c("thead", { staticClass: "bg-primary text-white" }, [
       _c("tr", [
         _c("th", [_vm._v("Id")]),
         _vm._v(" "),
         _c("th", [_vm._v("Nombre")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Talla")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Observaciones")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Cantidad")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Fecha de embarque")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Marca")]),
         _vm._v(" "),
         _c("th", [_vm._v("Acciones")])
       ])
